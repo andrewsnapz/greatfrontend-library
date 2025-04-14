@@ -1,0 +1,159 @@
+@use "../../variables.scss";
+
+.button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  gap: 6px;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px rgba(68, 76, 231, 0.12);
+  }
+
+  &:disabled {
+    color: variables.$disabled-text-color;
+    background-color: variables.$disabled-background-color;
+    pointer-events: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &__icon-alignment-left {
+    order: -1;
+  }
+
+  &__icon-alignment-right {
+    order: 1;
+  }
+}
+
+.button-md {
+  height: 40px;
+  font-size: variables.$font-size-sm;
+  line-height: variables.$line-height-sm;
+  font-weight: variables.$font-weight-medium;
+  padding-block: 10px;
+  padding-inline: 14px;
+}
+
+.button-icon-size-md {
+  width: 40px;
+}
+
+.button-lg {
+  padding-block: 10px;
+  padding-inline: 16px;
+}
+
+.button-icon-size-lg {
+  width: 20px;
+}
+
+.button-xl {
+  padding-block: 16px;
+  padding-inline: 24px;
+}
+
+.button-icon-size-xl {
+  width: 20px;
+}
+
+.button-2xl {
+  padding: 18px;
+}
+
+.button-icon-size-2xl {
+  width: 24px;
+}
+
+.button-primary {
+  color: variables.$primary-text-color-invert;
+  background-color: variables.$brand-primary-background-color;
+
+  &:hover {
+    background-color: variables.$brand-primary-emphasize-background-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  &:focus {
+    background-color: variables.$brand-primary-emphasize-background-color;
+  }
+}
+
+.button-secondary {
+  color: variables.$primary-text-color;
+  background-color: variables.$primary-background-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+
+  &:hover {
+    background-color: variables.$secondary-background-color-hover;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  &:focus {
+    background-color: variables.$secondary-background-color-hover;
+  }
+}
+
+.button-tertiary {
+  color: variables.$brand-primary-background-color;
+  background-color: transparent;
+
+  &:hover {
+    background-color: variables.$primary-hover-background-color;
+  }
+
+  &:focus {
+    background-color: variables.$primary-hover-background-color;
+  }
+}
+
+.button-danger {
+  color: variables.$primary-text-color-invert;
+  background-color: variables.$error-background-color;
+
+  &:hover {
+    background-color: variables.$error-emphasize-background-color;
+  }
+
+  &:focus {
+    background-color: variables.$error-emphasize-background-color;
+  }
+}
+
+.button-link {
+  text-decoration: none;
+  padding: 0;
+}
+
+.button-link-default {
+  color: variables.$brand-primary-background-color;
+  background-color: transparent;
+
+  &:hover {
+    color: variables.$brand-primary-emphasize-background-color;
+  }
+
+  &:focus {
+    color: variables.$brand-primary-emphasize-background-color;
+  }
+}
+
+.button-link-grey {
+  color: variables.$secondary-text-color;
+  background-color: transparent;
+
+  &:hover {
+    color: variables.$primary-text-color;
+  }
+
+  &:focus {
+    color: variables.$primary-text-color;
+  }
+}

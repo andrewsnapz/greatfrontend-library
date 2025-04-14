@@ -1,0 +1,24 @@
+@use "../../variables.scss";
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(variables.$mobile-columns, 1fr);
+  padding-inline: variables.$mobile-side-padding;
+  gap: variables.$mobile-column-gap;
+  max-width: variables.$mobile-max-container-width;
+
+  @media (min-width: variables.$tablet-breakpoint) {
+    grid-template-columns: repeat(variables.$tablet-columns, 1fr);
+    padding-inline: variables.$tablet-side-padding;
+    gap: variables.$tablet-column-gap;
+    max-width: variables.$tablet-max-container-width;
+  }
+
+  @media (min-width: variables.$desktop-breakpoint) {
+    justify-self: center;
+    grid-template-columns: repeat(variables.$desktop-columns, 1fr);
+    padding-inline: variables.$desktop-side-padding;
+    gap: variables.$desktop-column-gap;
+    max-width: variables.$desktop-max-container-width;
+  }
+}
