@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.variants-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}

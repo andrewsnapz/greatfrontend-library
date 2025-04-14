@@ -1,35 +1,160 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Button from "./components/button";
+import { RiStarLine } from "@remixicon/react";
+import PageLayout from "./components/page-layout";
+import "./App.scss";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <PageLayout>
+      <div className="app">
+        <div className="variants-container">
+          <Button kind="primary" size="md">
+            Button CTA
+          </Button>
+          <Button
+            kind="primary"
+            size="lg"
+            icon={RiStarLine}
+            iconDescription="star icon"
+          >
+            Button CTA
+          </Button>
+          <Button
+            kind="primary"
+            size="xl"
+            icon={RiStarLine}
+            iconAlignment="right"
+          >
+            Button CTA
+          </Button>
+          <Button kind="primary" size="2xl">
+            Button CTA
+          </Button>
+          <Button kind="primary" size="2xl" icon={RiStarLine} />
+        </div>
+        <div className="variants-container">
+          <Button kind="secondary" size="md">
+            Button CTA
+          </Button>
+          <Button
+            kind="secondary"
+            size="lg"
+            icon={RiStarLine}
+            iconDescription="star icon"
+          >
+            Button CTA
+          </Button>
+          <Button
+            kind="secondary"
+            size="xl"
+            icon={RiStarLine}
+            iconAlignment="right"
+          >
+            Button CTA
+          </Button>
+          <Button kind="secondary" size="2xl">
+            Button CTA
+          </Button>
+          <Button kind="secondary" size="2xl" icon={RiStarLine} />
+        </div>
+        <div className="variants-container">
+          <Button kind="tertiary" size="md">
+            Button CTA
+          </Button>
+          <Button
+            kind="tertiary"
+            size="lg"
+            icon={RiStarLine}
+            iconDescription="star icon"
+          >
+            Button CTA
+          </Button>
+          <Button
+            kind="tertiary"
+            size="xl"
+            icon={RiStarLine}
+            iconAlignment="right"
+          >
+            Button CTA
+          </Button>
+          <Button kind="tertiary" size="2xl">
+            Button CTA
+          </Button>
+          <Button kind="tertiary" size="2xl" icon={RiStarLine} />
+        </div>
+        <div className="variants-container">
+          <Button to="#" size="md">
+            Button CTA
+          </Button>
+          <Button
+            to="#"
+            size="lg"
+            icon={RiStarLine}
+            iconDescription="star icon"
+          >
+            Button CTA
+          </Button>
+          <Button to="#" size="xl" icon={RiStarLine} iconAlignment="right">
+            Button CTA
+          </Button>
+          <Button to="#" size="2xl">
+            Button CTA
+          </Button>
+          <Button to="#" size="2xl" icon={RiStarLine} />
+        </div>
+        <div className="variants-container">
+          <Button to="#" kind="grey" size="md">
+            Button CTA
+          </Button>
+          <Button
+            to="#"
+            kind="grey"
+            size="lg"
+            icon={RiStarLine}
+            iconDescription="star icon"
+          >
+            Button CTA
+          </Button>
+          <Button
+            to="#"
+            kind="grey"
+            size="xl"
+            icon={RiStarLine}
+            iconAlignment="right"
+          >
+            Button CTA
+          </Button>
+          <Button to="#" kind="grey" size="2xl">
+            Button CTA
+          </Button>
+          <Button to="#" kind="grey" size="2xl" icon={RiStarLine} />
+        </div>
+        <div className="variants-container">
+          <Button kind="danger" size="md">
+            Button CTA
+          </Button>
+          <Button
+            kind="danger"
+            size="lg"
+            icon={RiStarLine}
+            iconDescription="star icon"
+          >
+            Button CTA
+          </Button>
+          <Button
+            kind="danger"
+            size="xl"
+            icon={RiStarLine}
+            iconAlignment="right"
+          >
+            Button CTA
+          </Button>
+          <Button kind="danger" size="2xl">
+            Button CTA
+          </Button>
+          <Button kind="danger" size="2xl" icon={RiStarLine} />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </PageLayout>
+  );
 }
-
-export default App
