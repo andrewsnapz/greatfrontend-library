@@ -1,5 +1,7 @@
-name: React Deployment
-on: push
+name: Testing
+on:
+  push:
+    branches: ["main"]
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -10,13 +12,28 @@ jobs:
         run: npm ci
       - name: linting
         run: npm run lint
-  build:
+  deploy:
     needs: [lint]
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: get code
+      - name: Checkout
         uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
       - name: install dependencies
-        run: npm ci
-      - name: run build
+        run: npm install
+      - name: build
         run: npm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload dist folder
+          path: "./dist"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
