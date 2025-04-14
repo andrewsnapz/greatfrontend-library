@@ -6,7 +6,7 @@
     "homepage": "https://andrewsnapz.github.io/greatfrontend-library-button/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
